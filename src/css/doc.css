@@ -336,9 +336,11 @@
 .doc .valign-middle {
   vertical-align: middle;
 }
-/* TODO: Styles for the admonition block */
 .doc .admonitionblock {
   margin: 1.4rem 0 0;
+  padding: 1rem;
+  background: var(--admonition-background);
+  border: var(--admonition-border);
 }
 
 .doc .admonitionblock p,
@@ -361,50 +363,58 @@
   width: 100%;
 }
 
+.doc .admonitionblock > table tr{
+  display: flex;
+  flex-direction: column;
+  gap: .25em;
+}
+
 .doc .admonitionblock td.content {
-  padding: 1rem 1rem 0.75rem;
-  background: var(--admonition-background);
+  padding: 0 1.3125rem;
   width: 100%;
   word-wrap: anywhere;
 }
 
 .doc .admonitionblock .icon {
-  position: absolute;
-  top: 0;
-  left: 0;
   font-size: calc(15 / var(--rem-base) * 1rem);
-  padding: 0 0.5rem;
-  height: 1.25rem;
+  padding: 0 0 0 1.25rem;
   line-height: 1;
   font-weight: var(--admonition-label-font-weight);
-  text-transform: uppercase;
-  border-radius: 0.45rem;
-  transform: translate(-0.5rem, -50%);
+  color: var(--color-black) !important;
 }
 
+.doc .admonitionblock .icon i[class^="fa icon"]{
+  height: 1rem;
+}
 .doc .admonitionblock.caution .icon {
   background-color: var(--caution-color);
   color: var(--caution-on-color);
+  background: no-repeat url("../img/caution.svg");
+
 }
 
 .doc .admonitionblock.important .icon {
   background-color: var(--important-color);
   color: var(--important-on-color);
+  background: no-repeat url("../img/important.svg");
 }
 
 .doc .admonitionblock.note .icon {
   background-color: var(--note-color);
   color: var(--note-on-color);
+  background: no-repeat url("../img/note.svg");
 }
 
 .doc .admonitionblock.tip .icon {
   background-color: var(--tip-color);
   color: var(--tip-on-color);
+  background: no-repeat url("../img/tip.svg");
 }
 
 .doc .admonitionblock.warning .icon {
   background-color: var(--warning-color);
   color: var(--warning-on-color);
+  background: no-repeat url("../img/warning.svg");
 }
 
 .doc .admonitionblock .icon i {
@@ -476,7 +486,7 @@
 
 .doc .quoteblock .attribution {
   color: var(--quote-attribution-font-color);
-  font-size: calc(15 / var(--rem-base) * 1rem);
+  font-size: inherit;
   margin-top: 0.75rem;
 }
 
@@ -493,7 +503,7 @@
 }
 
 .doc .verseblock {
-  font-size: 1.15em;
+  font-size: inherit;
   padding: 1rem 2rem;
 }
 
@@ -630,7 +640,7 @@
 .doc .videoblock .title,
 .doc .tableblock caption {
   color: var(--caption-font-color);
-  font-size: calc(16 / var(--rem-base) * 1rem);
+  font-size: inherit;
   font-style: var(--caption-font-style);
   font-weight: var(--caption-font-weight);
   hyphens: none;
