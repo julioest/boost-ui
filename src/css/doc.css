@@ -336,6 +336,7 @@
 .doc .valign-middle {
   vertical-align: middle;
 }
+
 .doc .admonitionblock {
   margin: 1.4rem 0 0;
   padding: 1rem;
@@ -363,10 +364,10 @@
   width: 100%;
 }
 
-.doc .admonitionblock > table tr{
+.doc .admonitionblock > table tr {
   display: flex;
   flex-direction: column;
-  gap: .25em;
+  gap: 0.25em;
 }
 
 .doc .admonitionblock td.content {
@@ -383,38 +384,38 @@
   color: var(--color-black) !important;
 }
 
-.doc .admonitionblock .icon i[class^="fa icon"]{
+.doc .admonitionblock .icon i[class^="fa icon"] {
   height: 1rem;
 }
+
 .doc .admonitionblock.caution .icon {
-  background-color: var(--caution-color);
   color: var(--caution-on-color);
   background: no-repeat url("../img/caution.svg");
-
+  background-color: var(--caution-color);
 }
 
 .doc .admonitionblock.important .icon {
-  background-color: var(--important-color);
   color: var(--important-on-color);
   background: no-repeat url("../img/important.svg");
+  background-color: var(--important-color);
 }
 
 .doc .admonitionblock.note .icon {
-  background-color: var(--note-color);
   color: var(--note-on-color);
   background: no-repeat url("../img/note.svg");
+  background-color: var(--note-color);
 }
 
 .doc .admonitionblock.tip .icon {
-  background-color: var(--tip-color);
   color: var(--tip-on-color);
   background: no-repeat url("../img/tip.svg");
+  background-color: var(--tip-color);
 }
 
 .doc .admonitionblock.warning .icon {
-  background-color: var(--warning-color);
   color: var(--warning-on-color);
   background: no-repeat url("../img/warning.svg");
+  background-color: var(--warning-color);
 }
 
 .doc .admonitionblock .icon i {
